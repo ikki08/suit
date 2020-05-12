@@ -20,6 +20,8 @@ class GuestListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "GUESTS"
         fetchGuestList()
     }
     

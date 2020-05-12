@@ -21,6 +21,7 @@ class EventListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "EVENTS"
         viewModel.createDummyEvent()
         eventTableView.reloadData()
     }
