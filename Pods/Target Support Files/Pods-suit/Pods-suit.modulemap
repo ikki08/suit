@@ -1,0 +1,6 @@
+framework module Pods_suit {
+  umbrella header "Pods-suit-umbrella.h"
+
+  export *
+  module * { export * }
+}
