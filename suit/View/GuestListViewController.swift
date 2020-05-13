@@ -22,10 +22,19 @@ class GuestListViewController: UIViewController {
         super.viewDidLoad()
         
         title = "GUESTS"
+        configureCollectionView()
         fetchGuestList()
     }
     
-    func fetchGuestList() {
+    // MARK: Private
+    
+    private func configureCollectionView() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(collectionViewPulled), for: .valueChanged)
+        guestCollectionView.refreshControl = refreshControl
+    }
+    
+    private func fetchGuestList() {
         viewModel.getGuestList()  { error in
             if error == nil {
                 self.guestCollectionView.reloadData()
@@ -33,7 +42,18 @@ class GuestListViewController: UIViewController {
                 let alert = UIAlertController.defaultAlert
                 self.present(alert, animated: true, completion: nil)
             }
+            
+            if let refreshControl = self.guestCollectionView.refreshControl {
+                refreshControl.endRefreshing()
+            }
         }
+    }
+    
+    //MARK: Action
+    
+    @objc func collectionViewPulled() {
+        viewModel.page = 0
+        fetchGuestList()
     }
 }
 
