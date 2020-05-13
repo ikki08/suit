@@ -57,20 +57,26 @@ class InitialViewController: UIViewController {
     // MARK: - Private
     
     private func setView() {
+        setNavigationControllerStyle()
         setImageView()
         containerView.shadowStyle(with: containerView.frame.size.height/32)
         nameTextField.circleSide()
         palindromeTextField.circleSide()
         nextButton.applyStyle()
         checkButton.applyStyle()
-        
     }
     
     private func setImageView() {
         let originalImage = UIImage(named: "bg_bright")
         let templateImage = originalImage?.withRenderingMode(.alwaysTemplate)
         bgImageView.image = templateImage
-        bgImageView.tintColor = UIColor(red: 217/255, green: 125/255, blue: 64/255, alpha: 1)
+        bgImageView.tintColor = UIColor.suitOrange
+    }
+    
+    private func setNavigationControllerStyle() {
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = UIColor.suitOrange
+        navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     // MARK: - Navigation
