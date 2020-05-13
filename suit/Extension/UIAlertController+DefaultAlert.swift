@@ -13,7 +13,7 @@ extension UIAlertController {
                                                message: "Something went wrong!")
     }
     
-    static func standardAlert(title: String, message: String) -> UIAlertController {
+    static func standardAlert(title: String?, message: String?) -> UIAlertController {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: UIAlertController.Style.alert)

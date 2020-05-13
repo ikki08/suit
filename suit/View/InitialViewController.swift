@@ -11,13 +11,17 @@ import UIKit
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var palindromeTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
     
+    let viewModel = InitialViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nextButton.applyStyle()
+        checkButton.applyStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +33,26 @@ class InitialViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    // MARK: - Action
 
+    @IBAction func checkButtonTapped(_ sender: Any) {
+        guard let text = palindromeTextField.text, text.count > 0 else {
+            let alert = UIAlertController.standardAlert(title: "Warning!", message: "Please put text on text field!")
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        var alert: UIAlertController
+        if viewModel.isPalindrome(text: text) {
+            alert = UIAlertController.standardAlert(title: nil, message: "isPalindrome")
+        } else {
+            alert = UIAlertController.standardAlert(title: nil, message: "not palindrome")
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
     // MARK: - Navigation
 

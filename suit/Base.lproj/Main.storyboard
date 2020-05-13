@@ -38,19 +38,42 @@
                                     <constraint firstAttribute="height" constant="34" id="kev-pJ-uqk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-Sg-ScP">
-                                <rect key="frame" x="120" y="223" width="135" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="80" y="272" width="140" height="34"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.49019607843137253" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="TRP-h0-72S"/>
+                                    <constraint firstAttribute="height" constant="34" id="RjH-ck-quC"/>
                                 </constraints>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="LsZ-WK-FNY" kind="show" identifier="InitialToDashboardSegue" id="EGf-Iw-6rS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type text palindrome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xme-mQ-14q">
+                                <rect key="frame" x="80" y="213" width="215" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="sFq-fp-qjr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvA-A7-71a">
+                                <rect key="frame" x="225" y="272" width="70" height="34"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.49019607840000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5im-fW-9C4"/>
+                                    <constraint firstAttribute="width" constant="70" id="cdt-kx-Uhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gg-lc-rNt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,16 +82,23 @@
                             <constraint firstItem="Bar-DC-PgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="1Z6-Ee-tbV"/>
                             <constraint firstItem="Bar-DC-PgE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="2tt-68-iT5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bar-DC-PgE" secondAttribute="trailing" constant="80" id="4hS-Az-cxK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g7X-Sg-ScP" secondAttribute="trailing" constant="120" id="Dp9-Ih-zFf"/>
-                            <constraint firstItem="g7X-Sg-ScP" firstAttribute="top" secondItem="Bar-DC-PgE" secondAttribute="bottom" constant="25" id="RIc-rL-uDV"/>
-                            <constraint firstItem="g7X-Sg-ScP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="spc-Kb-TGW"/>
+                            <constraint firstItem="g7X-Sg-ScP" firstAttribute="top" secondItem="xme-mQ-14q" secondAttribute="bottom" constant="25" id="BZT-tr-J25"/>
+                            <constraint firstItem="xvA-A7-71a" firstAttribute="leading" secondItem="g7X-Sg-ScP" secondAttribute="trailing" constant="5" id="DdC-no-L9g"/>
+                            <constraint firstItem="xme-mQ-14q" firstAttribute="top" secondItem="Bar-DC-PgE" secondAttribute="bottom" constant="15" id="HhL-n2-MdE"/>
+                            <constraint firstItem="g7X-Sg-ScP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="RuR-Pw-1tG"/>
+                            <constraint firstItem="xvA-A7-71a" firstAttribute="top" secondItem="xme-mQ-14q" secondAttribute="bottom" constant="25" id="YkQ-bp-JMp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xvA-A7-71a" secondAttribute="trailing" constant="80" id="ebs-QF-YsX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xme-mQ-14q" secondAttribute="trailing" constant="80" id="hkp-VQ-Lmv"/>
+                            <constraint firstItem="xme-mQ-14q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="jyu-F7-Gu9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="UGc-dz-dgF"/>
                     <connections>
+                        <outlet property="checkButton" destination="xvA-A7-71a" id="eWj-cW-sgR"/>
                         <outlet property="nameTextField" destination="Bar-DC-PgE" id="85r-Qj-0vc"/>
                         <outlet property="nextButton" destination="g7X-Sg-ScP" id="eQP-th-xTo"/>
+                        <outlet property="palindromeTextField" destination="xme-mQ-14q" id="cKw-Uv-gNw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
