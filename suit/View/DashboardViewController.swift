@@ -18,7 +18,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLabel.text = "Name: \(viewModel.name)"
+        nameLabel.text = "\(viewModel.name)"
         chooseEventButton.applyStyle()
         chooseGuestButton.applyStyle()
     }
