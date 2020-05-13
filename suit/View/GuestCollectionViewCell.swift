@@ -15,5 +15,6 @@ class GuestCollectionViewCell: UICollectionViewCell {
     func setCell(guest: Guest) {
         nameLabel.text = guest.firstName + " " + guest.lastName
         avatarImageView.circleSide()
+        avatarImageView.setImage(urlString: guest.avatarURL)
     }
 }

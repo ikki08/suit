@@ -53,6 +53,7 @@ class GuestListViewController: UIViewController {
     
     @objc func collectionViewPulled() {
         viewModel.page = 0
+        viewModel.guestList.removeAll()
         fetchGuestList()
     }
 }

@@ -10,6 +10,7 @@
 		342F661A246BA48000011B2A /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F6619246BA48000011B2A /* InitialViewModel.swift */; };
 		342F661C246BCBC000011B2A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F661B246BCBC000011B2A /* UIView+Extension.swift */; };
 		342F661E246C240A00011B2A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F661D246C240A00011B2A /* UIColor+Extension.swift */; };
+		342F6620246C453A00011B2A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F661F246C453A00011B2A /* UIImageView+Extension.swift */; };
 		345336762469153B003DB46E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336752469153B003DB46E /* AppDelegate.swift */; };
 		345336782469153B003DB46E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336772469153B003DB46E /* SceneDelegate.swift */; };
 		3453367A2469153B003DB46E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336792469153B003DB46E /* InitialViewController.swift */; };
@@ -40,6 +41,7 @@
 		342F6619246BA48000011B2A /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		342F661B246BCBC000011B2A /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		342F661D246C240A00011B2A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		342F661F246C453A00011B2A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		345336722469153B003DB46E /* suit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = suit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345336752469153B003DB46E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		345336772469153B003DB46E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				3453369324698DB5003DB46E /* UIButton+Utilities.swift */,
 				342F661D246C240A00011B2A /* UIColor+Extension.swift */,
 				342F661B246BCBC000011B2A /* UIView+Extension.swift */,
+				342F661F246C453A00011B2A /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				3453369424698DB5003DB46E /* UIButton+Utilities.swift in Sources */,
 				3453369224694BD3003DB46E /* EventTableViewCell.swift in Sources */,
 				342F661E246C240A00011B2A /* UIColor+Extension.swift in Sources */,
+				342F6620246C453A00011B2A /* UIImageView+Extension.swift in Sources */,
 				3453367A2469153B003DB46E /* InitialViewController.swift in Sources */,
 				346E4E93246A655F00F54FA2 /* DashboardViewModel.swift in Sources */,
 				345336A42469B14B003DB46E /* GetGuestsRequest.swift in Sources */,
@@ -479,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rzk.suit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -498,7 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rzk.suit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
