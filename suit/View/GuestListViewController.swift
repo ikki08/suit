@@ -40,16 +40,26 @@ class GuestListViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 
 extension GuestListViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return viewModel.guestList.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let guest = viewModel.guestList[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GuestCell", for: indexPath) as! GuestCollectionViewCell
         cell.setCell(guest: guest)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.guestList.count - 1, viewModel.guestList.count % 10 == 0 {
+           fetchGuestList()
+         }
     }
 }
 

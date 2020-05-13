@@ -11,9 +11,10 @@ import SwiftyJSON
 
 class GuestListViewModel: NSObject {
     var guestList = Array<Guest>()
+    var page = 0
     
     func getGuestList(completion:@escaping (_ error: Error?) -> Void) {
-        let getGuestsRequest = GetGuestsRequest()
+        let getGuestsRequest = GetGuestsRequest(page: page + 1)
         let restRequest = RESTRequest()
         restRequest.execute(request: getGuestsRequest,
                             success: { response in
@@ -21,6 +22,7 @@ class GuestListViewModel: NSObject {
                                 if let data = jsonResponse["data"].array,
                                     data.count > 0 {
                                     self.parseGetGuestList(data: data)
+                                    self.page += 1
                                     completion(nil)
                                 } else {
                                     completion(NSError.defaultError)
