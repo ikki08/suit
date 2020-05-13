@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		342F661A246BA48000011B2A /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F6619246BA48000011B2A /* InitialViewModel.swift */; };
+		342F661C246BCBC000011B2A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F661B246BCBC000011B2A /* UIView+Extension.swift */; };
 		345336762469153B003DB46E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336752469153B003DB46E /* AppDelegate.swift */; };
 		345336782469153B003DB46E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336772469153B003DB46E /* SceneDelegate.swift */; };
 		3453367A2469153B003DB46E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345336792469153B003DB46E /* InitialViewController.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		143FA88377DE23F669EC9376 /* Pods-suit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-suit.debug.xcconfig"; path = "Target Support Files/Pods-suit/Pods-suit.debug.xcconfig"; sourceTree = "<group>"; };
 		342F6619246BA48000011B2A /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		342F661B246BCBC000011B2A /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		345336722469153B003DB46E /* suit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = suit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345336752469153B003DB46E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		345336772469153B003DB46E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				345336A62469B298003DB46E /* NSError+DefaultError.swift */,
 				345336AC2469C28D003DB46E /* UIAlertController+DefaultAlert.swift */,
 				3453369324698DB5003DB46E /* UIButton+Utilities.swift */,
+				342F661B246BCBC000011B2A /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				345336782469153B003DB46E /* SceneDelegate.swift in Sources */,
 				345336A72469B298003DB46E /* NSError+DefaultError.swift in Sources */,
 				3453369C2469AA72003DB46E /* EventListViewModel.swift in Sources */,
+				342F661C246BCBC000011B2A /* UIView+Extension.swift in Sources */,
 				345336A12469B0DA003DB46E /* RESTRequest.swift in Sources */,
 				3453368A24692D0A003DB46E /* DashboardViewController.swift in Sources */,
 				345336AB2469C04D003DB46E /* GuestCollectionViewCell.swift in Sources */,
