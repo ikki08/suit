@@ -37,4 +37,23 @@ class GuestListViewModel: NSObject {
             guestList.append(guest)
         }
     }
+    
+    func isPrime(_ number: Int) -> Bool {
+        if number <= 3 {
+            return number > 1
+        } else if number % 2 == 0 || number % 3 == 0 {
+            return false
+        }
+        
+        var counter = 5
+        while counter * counter <= number {
+            if number % counter == 0 || number % (counter + 1) == 0 {
+                return false
+            }
+            
+            counter += 6
+        }
+        
+        return true
+    }
 }
